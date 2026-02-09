@@ -1,6 +1,8 @@
 import hashlib
 import getpass
 from storage import load_users, save_users
+print("AUTH VERSION: returning username")
+
 
 def hash_password(password):
     return hashlib.sha256(password.encode()).hexdigest()
@@ -33,8 +35,10 @@ def register_user():
         break
 
     users[username] = {
-        "password": hash_password(password)
-    }
+    "password": hash_password(password),
+    "todos": []
+}
+
     save_users(users)
     print("Registration successful.")   
     print(f"Welcome, {username}!")
@@ -53,9 +57,9 @@ def login_user():
 
         if users[username]["password"] == hashed:
             print(f"Welcome back, {username}!")
-            return True
+            return username
         else:
             attempts -= 1
             print(f"Incorrect password. Attempts left: {attempts}")
     print("Too many failed attempts.")
-    return False 
+    return None
