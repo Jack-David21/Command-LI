@@ -1,7 +1,6 @@
 import hashlib
 import getpass
 from storage import load_users, save_users
-print("AUTH VERSION: returning username")
 
 
 def hash_password(password):
