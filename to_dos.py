@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from storage import load_users, save_users
 
 def add_todo(username, title):
@@ -63,7 +62,6 @@ def update_todo(username, todo_id, new_title):
             return
     print("Task not found.")
 
-=======
 from storage import load_users, save_users
 
 def add_todo(username, title):
@@ -128,4 +126,3 @@ def update_todo(username, todo_id, new_title):
             return
     print("Task not found.")
 
->>>>>>> d92d65e4faac9d88e1fb4067340c553ac9f8b99f
