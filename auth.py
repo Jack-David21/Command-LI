@@ -1,6 +1,8 @@
 import hashlib
 import getpass
 from storage import load_users, save_users
+print("AUTH VERSION: returning username")
+
 
 
 def hash_password(password):
@@ -61,4 +63,8 @@ def login_user():
             attempts -= 1
             print(f"Incorrect password. Attempts left: {attempts}")
     print("Too many failed attempts.")
+<<<<<<< HEAD
     return None
+=======
+    return None
+>>>>>>> d92d65e4faac9d88e1fb4067340c553ac9f8b99f
